@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+Diseases - MediBot AI
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<div class="medical-page">
+
+
+<h1>
+🩺 Disease Information
+</h1>
+
+
+<input
+type="text"
+id="search"
+placeholder="Search disease..."
+onkeyup="searchDisease()">
+
+
+
+<div class="medical-grid">
+
+
+{% for disease in diseases %}
+
+
+<div class="medical-card">
+
+
+<h2>
+{{ disease.Disease }}
+</h2>
+
+
+<h4>
+Symptoms
+</h4>
+
+<p>
+{{ disease.Symptoms }}
+</p>
+
+
+
+<h4>
+Causes
+</h4>
+
+<p>
+{{ disease.Causes }}
+</p>
+
+
+
+<h4>
+Prevention
+</h4>
+
+<p>
+{{ disease.Prevention }}
+</p>
+
+
+
+<h4>
+Treatment
+</h4>
+
+<p>
+{{ disease.Treatment }}
+</p>
+
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function searchDisease(){
+
+let input =
+document.getElementById("search")
+.value
+.toLowerCase();
+
+
+let cards =
+document.querySelectorAll(
+".medical-card"
+);
+
+
+cards.forEach(card=>{
+
+
+if(
+card.innerText
+.toLowerCase()
+.includes(input)
+)
+
+{
+
+card.style.display="block";
+
+}
+
+else{
+
+card.style.display="none";
+
+}
+
+
+});
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Database
+*.db
+
+# Uploads
+uploads/
+
+# Models
+*.pkl
+
+# Virtual Environment
+venv/

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediBot AI | Hospital Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>🩺 MediBot AI</h2>
+            <p>Hospital-grade health assistant</p>
+        </div>
+
+        <div class="profile">
+            <div class="profile-icon">👤</div>
+            <div>
+                <h4>{{ current_user.username }}</h4>
+                <p>Patient account</p>
+            </div>
+        </div>
+
+        <button id="newChat" class="primary-button">New Consultation</button>
+
+        <nav class="menu">
+            <a href="/">AI Consult</a>
+            <a href="/diseases">Diseases</a>
+            <a href="/medicines">Medicines</a>
+            <a href="/first-aid">First Aid</a>
+            <a href="/nutrition">Nutrition</a>
+        </nav>
+
+        <div class="history">
+            <div class="history-header">
+                <h3>Recent Topics</h3>
+                <span>Quick revisit</span>
+            </div>
+            <ul id="historyList"></ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="/export-chat" class="secondary-button">Download Summary</a>
+            <a href="/logout" class="logout">Logout</a>
+        </div>
+    </aside>
+
+    <main class="chat">
+        <header class="chat-header">
+            <div>
+                <h1>MediBot AI</h1>
+                <p>Your trusted medical assistant for clear, professional answers. Ask anything about symptoms, medications, reports, or treatment guidance.</p>
+            </div>
+        </header>
+
+        <section id="chatBox" class="chat-box"></section>
+
+        <div id="typing" class="typing">MediBot AI is preparing a detailed response...</div>
+
+        <div class="assistant-guidance">
+            <p>Tip: Ask with details like symptoms, duration, or medicine names for the most helpful answer.</p>
+        </div>
+
+        <div class="upload-area">
+            <input type="file" id="pdfFile" accept=".pdf">
+            <button id="uploadBtn" class="secondary-button">Upload Report</button>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="message" placeholder="Ask a medical question..." autocomplete="off">
+            <button id="voiceBtn" class="icon-button" title="Voice input">🎤</button>
+            <button id="sendBtn" class="primary-button">Send</button>
+            <button id="speakBtn" class="icon-button" title="Read aloud">🔊</button>
+        </div>
+    </main>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

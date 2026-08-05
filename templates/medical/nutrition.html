@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+Nutrition
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<h1>
+🥗 Nutrition Guide
+</h1>
+
+
+<div class="medical-grid">
+
+
+{% for item in nutrition %}
+
+
+<div class="medical-card">
+
+
+<h2>
+{{ item.Topic }}
+</h2>
+
+
+<p>
+
+{{ item.Information }}
+
+</p>
+
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+First Aid
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<h1>
+🚑 First Aid Guide
+</h1>
+
+
+
+<div class="medical-grid">
+
+
+{% for item in first_aid %}
+
+
+<div class="medical-card">
+
+
+<h2>
+{{ item.Emergency }}
+</h2>
+
+
+<p>
+
+{{ item.Steps }}
+
+</p>
+
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+
+</body>
+
+</html>

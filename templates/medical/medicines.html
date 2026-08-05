@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+Medicines
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<h1>
+💊 Medicine Information
+</h1>
+
+
+<div class="medical-grid">
+
+
+{% for medicine in medicines %}
+
+
+<div class="medical-card">
+
+
+<h2>
+{{ medicine.Medicine }}
+</h2>
+
+
+<p>
+
+<b>Uses:</b>
+
+{{ medicine.Uses }}
+
+</p>
+
+
+<p>
+
+<b>Side Effects:</b>
+
+{{ medicine.Side_Effects }}
+
+</p>
+
+
+<p>
+
+<b>Warnings:</b>
+
+{{ medicine.Warnings }}
+
+</p>
+
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+
+</body>
+
+</html>

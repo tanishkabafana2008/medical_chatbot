@@ -1,0 +1,43 @@
+<h1>
+Disease Management
+</h1>
+
+
+<a href="/admin/add-disease">
+
+Add Disease
+
+</a>
+
+
+
+{% for disease in diseases %}
+
+
+<div class="admin-card">
+
+
+<h2>
+{{disease.Disease}}
+</h2>
+
+
+<p>
+{{disease.Symptoms}}
+</p>
+
+
+<a href="#">
+Edit
+</a>
+
+
+<a href="#">
+Delete
+</a>
+
+
+</div>
+
+
+{% endfor %}

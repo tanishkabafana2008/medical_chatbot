@@ -1,0 +1,1640 @@
+
+If you mean you want README information for a student project, a good README should explain what the project is, how it works, how to install it, how to run it, and what technologies were used.
+
+For your Medical RAG Chatbot student project, you can use this structure:
+
+Medical Information RAG Chatbot
+📌 Project Overview
+The Medical Information RAG Chatbot is an AI-based web application that provides general medical information using Retrieval-Augmented Generation (RAG).
+
+Instead of relying only on the knowledge stored inside an AI model, the chatbot retrieves relevant information from a collection of trusted medical documents and uses that information to generate an answer.
+
+The project is designed for educational and informational purposes and is not intended to replace professional medical advice.
+
+🎯 Objectives
+Provide quick access to general medical information.
+
+Allow users to ask questions in natural language.
+
+Retrieve relevant information from medical documents.
+
+Reduce hallucinations by grounding answers in retrieved documents.
+
+Provide source information along with responses.
+
+Demonstrate practical implementation of a RAG system.
+
+⚙️ How It Works
+User Question
+      ↓
+Question Embedding
+      ↓
+FAISS Vector Search
+      ↓
+Relevant Medical Documents
+      ↓
+Retrieved Context
+      ↓
+LLM
+      ↓
+Generated Answer
+      ↓
+User
+The documents are first converted into smaller text chunks. These chunks are converted into numerical embeddings and stored in a vector database. When the user asks a question, the system searches for the most relevant chunks and sends them to the language model as context.
+
+🛠️ Technologies Used
+Python
+
+Flask
+
+Retrieval-Augmented Generation (RAG)
+
+FAISS
+
+Sentence Transformers
+
+Ollama
+
+HTML
+
+CSS
+
+JavaScript
+
+PyPDF
+
+NumPy
+
+📂 Project Structure
+medical_chatbot/
+│
+├── app.py
+├── build_rag_index.py
+├── knowledge_base.py
+├── requirements.txt
+│
+├── rag/
+│   ├── __init__.py
+│   ├── document_loader.py
+│   ├── text_splitter.py
+│   ├── embeddings.py
+│   ├── vector_store.py
+│   ├── retriever.py
+│   └── generator.py
+│
+├── data/
+│   └── medical_documents/
+│
+├── vector_store/
+│   ├── medical.index
+│   └── metadata.json
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    ├── style.css
+    └── script.js
+🚀 Installation
+Clone or open the project:
+
+cd medical_chatbot
+Create a virtual environment:
+
+python3 -m venv venv
+Activate it:
+
+source venv/bin/activate
+Install dependencies:
+
+pip install -r requirements.txt
+📄 Add Medical Documents
+Place medical PDF documents inside:
+
+data/medical_documents/
+Example:
+
+data/medical_documents/
+├── first_aid.pdf
+├── nutrition.pdf
+└── health_information.pdf
+🧠 Build the RAG Knowledge Base
+Run:
+
+python3 build_rag_index.py
+This will:
+
+Read the medical PDFs.
+
+Extract their text.
+
+Split the text into chunks.
+
+Generate embeddings.
+
+Store the embeddings in FAISS.
+
+Save document metadata.
+
+▶️ Run the Application
+Start Ollama and make sure your selected model is available.
+
+Then run:
+
+python3 app.py
+Open the application in your browser at:
+
+http://127.0.0.1:5000
+💬 Example Questions
+You can ask:
+
+What are common symptoms of dehydration?
+
+What are the symptoms of influenza?
+
+What should I know about first aid for minor burns?
+
+What are common causes of headaches?
+The chatbot searches the medical knowledge base before generating its response.
+
+🔍 RAG Pipeline
+1. Document Loading
+Medical PDFs are read using PyPDF.
+
+2. Text Chunking
+Large documents are divided into smaller sections.
+
+3. Embeddings
+Sentence Transformers converts each chunk into a vector representation.
+
+4. Vector Storage
+FAISS stores and searches the vectors efficiently.
+
+5. Retrieval
+When a user asks a question, the system retrieves the most relevant document chunks.
+
+6. Generation
+The retrieved context is provided to the LLM, which generates the final response.
+
+🔐 Safety
+This application provides general medical information only.
+
+It should not be used for:
+
+Medical diagnosis
+
+Emergency decision-making
+
+Prescription of medication
+
+Replacing a doctor or healthcare professional
+
+Users with serious or emergency symptoms should seek appropriate professional medical care.
+
+🌟 Future Improvements
+Possible future features include:
+
+Voice input
+
+Text-to-speech
+
+User authentication
+
+Chat history
+
+PDF upload through the web interface
+
+Page-level source citations
+
+Better document ranking
+
+Hybrid keyword + semantic search
+
+Multilingual support
+
+Admin dashboard
+
+RAG evaluation and accuracy metrics
+
+Improved medical safety detection
+
+👩‍💻 Student Project
+Project Type: AI / Machine Learning / Web Application
+
+Domain: Generative AI / Healthcare Information
+
+Architecture: Retrieval-Augmented Generation (RAG)
+
+Frontend: HTML, CSS, JavaScript
+
+Backend: Python Flask
+
+Vector Database: FAISS
+
+Embedding Model: Sentence Transformers
+
+LLM: Ollama
+
+📜 Disclaimer
+This project is developed for student/educational purposes. The information generated by the application should not be considered professional medical advice.
+
+
+
+AI_Expense_Tracker.zip
+Zip Archive
+give me readme files
+
+I checked the AI_Expense_Tracker.zip you uploaded and created a README specifically based on the actual project structure, features, Flask routes, OCR, ML prediction, SQLite database, reports, and dashboard.
+
+Download the README.md
+
+You can put it directly in your project root:
+
+AI_Expense_Tracker/
+├── README.md
+├── app.py
+├── config.py
+├── models.py
+├── requirements.txt
+├── ai/
+├── utils/
+├── templates/
+└── static/
+Then commit it to GitHub with:
+
+git add README.md
+git commit -m "Add project README"
+git push
+
+
+
+AI_Expense_Tracker_README.md
+Document
+
+
+
+medical_chatbot(1).zip
+Zip Archive
+give readme files
+
+I inspected your uploaded medical_chatbot(1).zip and created a README specifically for that project, including its actual:
+
+RAG implementation
+
+FAISS vector index
+
+all-MiniLM-L6-v2 embeddings
+
+Medical CSV datasets
+
+Flask application
+
+Login/register system
+
+Chat history
+
+PDF report upload
+
+Medical reference pages
+
+Admin dashboard
+
+Docker support
+
+Installation and run instructions
+
+Project structure
+
+Limitations and future enhancements
+
+📄 Download
+Download MediBot AI README.md
+
+I also placed the README inside the extracted project as:
+
+medical_chatbot/
+└── README.md
+The README describes your current implementation accurately: your chatbot currently uses FAISS + embeddings for retrieval and generates responses from retrieved local data; it does not currently use a separate generative LLM. 
+
+
+MediBot_AI_README.md
+Document
+
+
+MediBot AI — Medical Information RAG Chatbot
+MediBot AI is a Flask-based medical information chatbot that uses Retrieval-Augmented Generation (RAG) techniques to retrieve relevant information from a local medical knowledge base.
+
+The application is designed as a student/educational project. It provides general medical information from local datasets and includes user authentication, chat history, medical reference pages, PDF report text extraction, chat export, and an admin area.
+
+Medical disclaimer: This application is for educational and informational purposes only. It is not a diagnostic tool and does not replace a qualified healthcare professional.
+
+Features
+🤖 RAG-Based Medical Chat
+The chatbot uses a local RAG retrieval pipeline:
+
+Medical CSV data is converted into searchable documents.
+
+Sentence Transformers generates embeddings.
+
+FAISS stores and searches the embeddings.
+
+The most relevant medical records are retrieved for each question.
+
+Answers are generated directly from the retrieved local records.
+
+No external LLM API is required by the current chatbot implementation.
+
+📚 Medical Knowledge Base
+The project contains local datasets for:
+
+Diseases
+
+Medicines
+
+Symptoms
+
+First aid
+
+Nutrition
+
+Data files are located in:
+
+data/
+├── diseases.csv
+├── medicines.csv
+├── symptoms.csv
+├── first_aid.csv
+└── nutrition.csv
+The project also includes dataset.csv, which is incorporated into the RAG index.
+
+🔐 User Authentication
+Users can:
+
+Register
+
+Log in
+
+Log out
+
+Access the chatbot after authentication
+
+Passwords are stored using Werkzeug password hashing.
+
+💬 Chat History
+The application stores conversations in SQLite:
+
+chat_history.db
+It supports:
+
+Saving user messages
+
+Saving chatbot responses
+
+Viewing chat history
+
+Starting a new chat
+
+Exporting chat history as PDF
+
+📄 Medical Report Upload
+Users can upload a PDF medical report.
+
+The application:
+
+Saves the PDF.
+
+Extracts text using pypdf.
+
+Searches the extracted text for disease names present in the local medical dataset.
+
+Displays matching reference information.
+
+This is a simple dataset-based report explainer, not a medical diagnostic system.
+
+🚑 Emergency Detection
+The chatbot checks for emergency-related phrases such as:
+
+Chest pain
+
+Difficulty breathing
+
+Severe bleeding
+
+Stroke
+
+Unconsciousness
+
+Severe allergic reaction
+
+Overdose
+
+Suicidal thoughts
+
+When detected, the application displays an emergency warning encouraging the user to seek urgent medical care.
+
+📖 Medical Reference Pages
+Authenticated users can access:
+
+/diseases
+/medicines
+/first-aid
+/nutrition
+These pages display information from the corresponding local CSV datasets.
+
+👨‍💼 Admin Area
+The project includes:
+
+/admin-login
+/admin-dashboard
+/admin-logout
+The default admin username is:
+
+admin
+The default password is:
+
+admin123
+For security, change the default password immediately and use the DEFAULT_ADMIN_PASSWORD environment variable for new installations.
+
+📦 Docker Support
+The project contains:
+
+Dockerfile
+docker-compose.yml
+for containerized deployment.
+
+How RAG Works in This Project
+The RAG pipeline is:
+
+Medical CSV Files
+       ↓
+Convert rows into medical documents
+       ↓
+Sentence Transformer
+       ↓
+Text Embeddings
+       ↓
+FAISS Vector Index
+       ↓
+User Question
+       ↓
+Question Embedding
+       ↓
+Similarity Search
+       ↓
+Top Relevant Medical Records
+       ↓
+Formatted Response
+       ↓
+User
+Index Creation
+Run:
+
+python3 rag_index.py
+This reads:
+
+data/diseases.csv
+data/medicines.csv
+data/symptoms.csv
+data/first_aid.csv
+data/nutrition.csv
+dataset.csv
+and creates:
+
+medical_index.faiss
+medical_docs.pkl
+These files are required by rag_retriever.py.
+
+Retrieval
+The rag_retriever.py module:
+
+Loads the FAISS index.
+
+Loads the saved medical documents.
+
+Converts the user's question into an embedding.
+
+Performs similarity search.
+
+Returns the top relevant documents.
+
+Filters results using a minimum similarity score.
+
+The current configuration retrieves up to 3 documents with a default minimum similarity score of 0.35.
+
+Important: This Is Retrieval-Based RAG
+The current project uses RAG for retrieval and grounding, but it does not use a separate generative LLM to write the final answer.
+
+Instead:
+
+Question
+   ↓
+FAISS retrieval
+   ↓
+Relevant records
+   ↓
+Rule-based formatting
+   ↓
+Final response
+This makes the current implementation fully local and avoids API keys.
+
+A future version can add an LLM after retrieval:
+
+Question
+   ↓
+FAISS
+   ↓
+Relevant medical context
+   ↓
+Local/Cloud LLM
+   ↓
+Generated answer
+That would make it a more traditional retrieval + generation RAG system.
+
+Project Structure
+medical_chatbot/
+│
+├── app.py
+├── chatbot.py
+├── knowledge_base.py
+├── database.py
+├── models.py
+├── config.py
+├── pdf_reader.py
+├── rag_index.py
+├── rag_retriever.py
+├── dataset.csv
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+├── .gitignore
+│
+├── data/
+│   ├── diseases.csv
+│   ├── symptoms.csv
+│   ├── first_aid.csv
+│   ├── medicines.csv
+│   └── nutrition.csv
+│
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── medical/
+│   │   ├── disease.html
+│   │   ├── medicines.html
+│   │   ├── first_aid.html
+│   │   └── nutrition.html
+│   └── admin/
+│       ├── login.html
+│       ├── dashboard.html
+│       └── disease.html
+│
+├── static/
+│   ├── style.css
+│   ├── script.js
+│   ├── logo.png
+│   └── favicon.ico
+│
+├── uploads/
+│   └── reports/
+│
+├── flask_session/
+│
+└── chat_history.db
+Technology Stack
+Technology	Purpose
+Python	Application development
+Flask	Web framework
+Flask-Login	User authentication
+Flask-Session	Session management
+SQLite	User and chat storage
+Pandas	Medical CSV processing
+Sentence Transformers	Text embeddings
+FAISS	Vector similarity search
+PyPDF	PDF text extraction
+Markdown	Formatting chatbot responses
+ReportLab	PDF chat export
+Gunicorn	Production WSGI server
+Docker	Containerization
+HTML/CSS/JavaScript	Frontend
+Embedding Model
+The project uses:
+
+all-MiniLM-L6-v2
+This model converts medical text and user questions into vector representations that can be compared using FAISS similarity search.
+
+Requirements
+The supplied requirements.txt contains:
+
+Flask==3.1.0
+Flask-Login==0.6.3
+Flask-Session==0.8.0
+python-dotenv==1.0.1
+pandas==2.2.3
+markdown==3.7
+requests==2.32.3
+gunicorn==23.0.0
+pypdf==5.1.0
+sentence-transformers==3.3.1
+faiss-cpu==1.9.0
+numpy==1.26.4
+werkzeug==3.1.3
+reportlab==4.2.5
+Installation
+1. Open the project
+cd ~/medical_chatbot
+Or use the directory where you extracted the project.
+
+2. Create a virtual environment
+python3 -m venv venv
+Activate it:
+
+source venv/bin/activate
+Your terminal should show:
+
+(venv)
+3. Install dependencies
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
+4. Verify the RAG dependencies
+python3 -c "import faiss, pandas, sentence_transformers; print('RAG dependencies OK')"
+Expected:
+
+RAG dependencies OK
+Build the RAG Index
+The RAG index must be built before the chatbot can perform semantic retrieval.
+
+Run:
+
+python3 rag_index.py
+You should see output similar to:
+
+Embedding ... documents with all-MiniLM-L6-v2...
+Saved ... vectors to medical_index.faiss
+Saved ... documents to medical_docs.pkl
+This creates:
+
+medical_index.faiss
+medical_docs.pkl
+Rebuild the index when data changes
+Run:
+
+python3 rag_index.py
+again whenever you modify:
+
+data/*.csv
+dataset.csv
+Run the Application
+Activate the virtual environment:
+
+cd ~/medical_chatbot
+source venv/bin/activate
+Then:
+
+python3 app.py
+The application runs on:
+
+http://127.0.0.1:5000
+Open that address in your browser.
+
+Application Routes
+Route	Purpose
+/	Main chatbot
+/register	User registration
+/login	User login
+/logout	User logout
+/chat	Chat API
+/new_chat	Start a new chat
+/history	Retrieve chat history
+/upload_report	Upload a medical PDF
+/export-chat	Export chat history as PDF
+/diseases	Disease reference
+/medicines	Medicine reference
+/first-aid	First-aid reference
+/nutrition	Nutrition reference
+/admin-login	Admin login
+/admin-dashboard	Admin dashboard
+/admin-logout	Admin logout
+Example Questions
+Try questions such as:
+
+What are the symptoms of diabetes?
+
+What causes fever?
+
+What is first aid for a burn?
+
+What are the uses of a medicine?
+
+What are common symptoms related to a headache?
+
+What can help prevent a disease?
+
+What are some nutrition recommendations?
+The answer is based on the information available in the local medical knowledge base.
+
+PDF Report Workflow
+The report feature accepts PDF files.
+
+PDF Upload
+    ↓
+pypdf text extraction
+    ↓
+Search for known disease names
+    ↓
+Match against local dataset
+    ↓
+Display reference information
+To upload a report, use the application's report upload feature.
+
+The uploaded files are stored under:
+
+uploads/reports/
+Database
+The project uses SQLite.
+
+Database file:
+
+chat_history.db
+The application creates the required tables automatically when it starts.
+
+User table
+Stores:
+
+ID
+
+Username
+
+Email
+
+Password hash
+
+Admin table
+Stores:
+
+ID
+
+Username
+
+Password hash
+
+Chat history table
+Stores:
+
+User message
+
+Bot response
+
+Timestamp
+
+Configuration
+The project loads environment variables using python-dotenv.
+
+Create a .env file if you need custom configuration:
+
+SECRET_KEY=replace-with-a-strong-secret-key
+DEFAULT_ADMIN_PASSWORD=replace-with-a-secure-password
+FLASK_DEBUG=false
+Do not commit .env to GitHub.
+
+The .gitignore file should be used to keep secrets, local databases, sessions, and generated files out of source control.
+
+Docker
+The project includes:
+
+Dockerfile
+docker-compose.yml
+You can build and start the application using Docker Compose:
+
+docker compose up --build
+If your Docker installation uses the older command:
+
+docker-compose up --build
+Then open:
+
+http://127.0.0.1:5000
+Security
+For a production deployment:
+
+Change the default admin password.
+
+Use a strong SECRET_KEY.
+
+Never commit passwords or API keys.
+
+Keep .env private.
+
+Use HTTPS.
+
+Validate uploaded files.
+
+Restrict uploaded file sizes.
+
+Use a production WSGI server such as Gunicorn.
+
+Review admin access controls.
+
+Avoid storing unnecessary personal medical information.
+
+Medical Safety
+This application is an informational chatbot, not a medical professional.
+
+It should not be used to:
+
+Diagnose a disease.
+
+Replace a doctor.
+
+Recommend prescription medication.
+
+Determine emergency treatment by itself.
+
+Interpret medical reports as a definitive diagnosis.
+
+The application includes emergency keyword detection to display an urgent-care warning for potentially serious situations.
+
+For severe or life-threatening symptoms, seek professional emergency medical care immediately.
+
+Known Limitations
+The knowledge base is limited to the supplied CSV datasets.
+
+Retrieval quality depends on the quality and coverage of those datasets.
+
+The current answer generator is rule-based rather than LLM-generated.
+
+The report explainer matches recognized disease names rather than performing clinical interpretation.
+
+Emergency detection is keyword-based and cannot reliably identify every emergency.
+
+The system should not be treated as a diagnostic medical AI.
+
+The FAISS index needs to be rebuilt after changes to the source data.
+
+Future Enhancements
+Potential improvements:
+
+Add a local LLM after FAISS retrieval.
+
+Add source/page citations.
+
+Add multilingual medical Q&A.
+
+Add voice input.
+
+Add text-to-speech.
+
+Add stronger medical safety filters.
+
+Add semantic report analysis.
+
+Add doctor/hospital information.
+
+Add better conversation memory.
+
+Add user-specific chat history.
+
+Add RAG evaluation metrics.
+
+Add hybrid keyword + vector search.
+
+Add reranking of retrieved documents.
+
+Add a modern responsive dashboard.
+
+Add automated testing.
+
+Add production deployment configuration.
+
+Student Project Details
+Project Name: MediBot AI — Medical Information RAG Chatbot
+
+Project Type: Student Project
+
+Domain: Artificial Intelligence / Generative AI / Healthcare Information
+
+Backend: Python + Flask
+
+Database: SQLite
+
+RAG: Retrieval-Augmented Generation
+
+Vector Database: FAISS
+
+Embedding Model: all-MiniLM-L6-v2
+
+Document Processing: Pandas + PyPDF
+
+Frontend: HTML + CSS + JavaScript
+
+Authentication: Flask-Login
+
+PDF Export: ReportLab
+
+Containerization: Docker
+
+Learning Outcomes
+This project demonstrates practical knowledge of:
+
+Python programming
+
+Flask web development
+
+REST-style JSON endpoints
+
+User authentication
+
+SQLite database operations
+
+Password hashing
+
+Session management
+
+Data processing with Pandas
+
+Semantic embeddings
+
+Vector databases
+
+FAISS similarity search
+
+RAG architecture
+
+PDF processing
+
+Machine-learning/AI application design
+
+Frontend and backend integration
+
+Docker deployment
+
+Author
+Tanishka Bafna
+
+MediBot AI — Medical Information RAG Chatbot
+
+License
+This project is intended primarily for educational and student-project use.
+
+If publishing it as an open-source project, add an appropriate license such as MIT after reviewing the licensing requirements of all included dependencies and datasets.
+
+Library
+/
+MediBot_AI_README.md
+
+
+MediBot AI — Medical Information RAG Chatbot
+MediBot AI is a Flask-based medical information chatbot that uses Retrieval-Augmented Generation (RAG) techniques to retrieve relevant information from a local medical knowledge base.
+
+The application is designed as a student/educational project. It provides general medical information from local datasets and includes user authentication, chat history, medical reference pages, PDF report text extraction, chat export, and an admin area.
+
+Medical disclaimer: This application is for educational and informational purposes only. It is not a diagnostic tool and does not replace a qualified healthcare professional.
+
+Features
+🤖 RAG-Based Medical Chat
+The chatbot uses a local RAG retrieval pipeline:
+
+Medical CSV data is converted into searchable documents.
+
+Sentence Transformers generates embeddings.
+
+FAISS stores and searches the embeddings.
+
+The most relevant medical records are retrieved for each question.
+
+Answers are generated directly from the retrieved local records.
+
+No external LLM API is required by the current chatbot implementation.
+
+📚 Medical Knowledge Base
+The project contains local datasets for:
+
+Diseases
+
+Medicines
+
+Symptoms
+
+First aid
+
+Nutrition
+
+Data files are located in:
+
+data/
+├── diseases.csv
+├── medicines.csv
+├── symptoms.csv
+├── first_aid.csv
+└── nutrition.csv
+The project also includes dataset.csv, which is incorporated into the RAG index.
+
+🔐 User Authentication
+Users can:
+
+Register
+
+Log in
+
+Log out
+
+Access the chatbot after authentication
+
+Passwords are stored using Werkzeug password hashing.
+
+💬 Chat History
+The application stores conversations in SQLite:
+
+chat_history.db
+It supports:
+
+Saving user messages
+
+Saving chatbot responses
+
+Viewing chat history
+
+Starting a new chat
+
+Exporting chat history as PDF
+
+📄 Medical Report Upload
+Users can upload a PDF medical report.
+
+The application:
+
+Saves the PDF.
+
+Extracts text using pypdf.
+
+Searches the extracted text for disease names present in the local medical dataset.
+
+Displays matching reference information.
+
+This is a simple dataset-based report explainer, not a medical diagnostic system.
+
+🚑 Emergency Detection
+The chatbot checks for emergency-related phrases such as:
+
+Chest pain
+
+Difficulty breathing
+
+Severe bleeding
+
+Stroke
+
+Unconsciousness
+
+Severe allergic reaction
+
+Overdose
+
+Suicidal thoughts
+
+When detected, the application displays an emergency warning encouraging the user to seek urgent medical care.
+
+📖 Medical Reference Pages
+Authenticated users can access:
+
+/diseases
+/medicines
+/first-aid
+/nutrition
+These pages display information from the corresponding local CSV datasets.
+
+👨‍💼 Admin Area
+The project includes:
+
+/admin-login
+/admin-dashboard
+/admin-logout
+The default admin username is:
+
+admin
+The default password is:
+
+admin123
+For security, change the default password immediately and use the DEFAULT_ADMIN_PASSWORD environment variable for new installations.
+
+📦 Docker Support
+The project contains:
+
+Dockerfile
+docker-compose.yml
+for containerized deployment.
+
+How RAG Works in This Project
+The RAG pipeline is:
+
+Medical CSV Files
+       ↓
+Convert rows into medical documents
+       ↓
+Sentence Transformer
+       ↓
+Text Embeddings
+       ↓
+FAISS Vector Index
+       ↓
+User Question
+       ↓
+Question Embedding
+       ↓
+Similarity Search
+       ↓
+Top Relevant Medical Records
+       ↓
+Formatted Response
+       ↓
+User
+Index Creation
+Run:
+
+python3 rag_index.py
+This reads:
+
+data/diseases.csv
+data/medicines.csv
+data/symptoms.csv
+data/first_aid.csv
+data/nutrition.csv
+dataset.csv
+and creates:
+
+medical_index.faiss
+medical_docs.pkl
+These files are required by rag_retriever.py.
+
+Retrieval
+The rag_retriever.py module:
+
+Loads the FAISS index.
+
+Loads the saved medical documents.
+
+Converts the user's question into an embedding.
+
+Performs similarity search.
+
+Returns the top relevant documents.
+
+Filters results using a minimum similarity score.
+
+The current configuration retrieves up to 3 documents with a default minimum similarity score of 0.35.
+
+Important: This Is Retrieval-Based RAG
+The current project uses RAG for retrieval and grounding, but it does not use a separate generative LLM to write the final answer.
+
+Instead:
+
+Question
+   ↓
+FAISS retrieval
+   ↓
+Relevant records
+   ↓
+Rule-based formatting
+   ↓
+Final response
+This makes the current implementation fully local and avoids API keys.
+
+A future version can add an LLM after retrieval:
+
+Question
+   ↓
+FAISS
+   ↓
+Relevant medical context
+   ↓
+Local/Cloud LLM
+   ↓
+Generated answer
+That would make it a more traditional retrieval + generation RAG system.
+
+Project Structure
+medical_chatbot/
+│
+├── app.py
+├── chatbot.py
+├── knowledge_base.py
+├── database.py
+├── models.py
+├── config.py
+├── pdf_reader.py
+├── rag_index.py
+├── rag_retriever.py
+├── dataset.csv
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+├── .gitignore
+│
+├── data/
+│   ├── diseases.csv
+│   ├── symptoms.csv
+│   ├── first_aid.csv
+│   ├── medicines.csv
+│   └── nutrition.csv
+│
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── medical/
+│   │   ├── disease.html
+│   │   ├── medicines.html
+│   │   ├── first_aid.html
+│   │   └── nutrition.html
+│   └── admin/
+│       ├── login.html
+│       ├── dashboard.html
+│       └── disease.html
+│
+├── static/
+│   ├── style.css
+│   ├── script.js
+│   ├── logo.png
+│   └── favicon.ico
+│
+├── uploads/
+│   └── reports/
+│
+├── flask_session/
+│
+└── chat_history.db
+Technology Stack
+Technology	Purpose
+Python	Application development
+Flask	Web framework
+Flask-Login	User authentication
+Flask-Session	Session management
+SQLite	User and chat storage
+Pandas	Medical CSV processing
+Sentence Transformers	Text embeddings
+FAISS	Vector similarity search
+PyPDF	PDF text extraction
+Markdown	Formatting chatbot responses
+ReportLab	PDF chat export
+Gunicorn	Production WSGI server
+Docker	Containerization
+HTML/CSS/JavaScript	Frontend
+Embedding Model
+The project uses:
+
+all-MiniLM-L6-v2
+This model converts medical text and user questions into vector representations that can be compared using FAISS similarity search.
+
+Requirements
+The supplied requirements.txt contains:
+
+Flask==3.1.0
+Flask-Login==0.6.3
+Flask-Session==0.8.0
+python-dotenv==1.0.1
+pandas==2.2.3
+markdown==3.7
+requests==2.32.3
+gunicorn==23.0.0
+pypdf==5.1.0
+sentence-transformers==3.3.1
+faiss-cpu==1.9.0
+numpy==1.26.4
+werkzeug==3.1.3
+reportlab==4.2.5
+Installation
+1. Open the project
+cd ~/medical_chatbot
+Or use the directory where you extracted the project.
+
+2. Create a virtual environment
+python3 -m venv venv
+Activate it:
+
+source venv/bin/activate
+Your terminal should show:
+
+(venv)
+3. Install dependencies
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
+4. Verify the RAG dependencies
+python3 -c "import faiss, pandas, sentence_transformers; print('RAG dependencies OK')"
+Expected:
+
+RAG dependencies OK
+Build the RAG Index
+The RAG index must be built before the chatbot can perform semantic retrieval.
+
+Run:
+
+python3 rag_index.py
+You should see output similar to:
+
+Embedding ... documents with all-MiniLM-L6-v2...
+Saved ... vectors to medical_index.faiss
+Saved ... documents to medical_docs.pkl
+This creates:
+
+medical_index.faiss
+medical_docs.pkl
+Rebuild the index when data changes
+Run:
+
+python3 rag_index.py
+again whenever you modify:
+
+data/*.csv
+dataset.csv
+Run the Application
+Activate the virtual environment:
+
+cd ~/medical_chatbot
+source venv/bin/activate
+Then:
+
+python3 app.py
+The application runs on:
+
+http://127.0.0.1:5000
+Open that address in your browser.
+
+Application Routes
+Route	Purpose
+/	Main chatbot
+/register	User registration
+/login	User login
+/logout	User logout
+/chat	Chat API
+/new_chat	Start a new chat
+/history	Retrieve chat history
+/upload_report	Upload a medical PDF
+/export-chat	Export chat history as PDF
+/diseases	Disease reference
+/medicines	Medicine reference
+/first-aid	First-aid reference
+/nutrition	Nutrition reference
+/admin-login	Admin login
+/admin-dashboard	Admin dashboard
+/admin-logout	Admin logout
+Example Questions
+Try questions such as:
+
+What are the symptoms of diabetes?
+
+What causes fever?
+
+What is first aid for a burn?
+
+What are the uses of a medicine?
+
+What are common symptoms related to a headache?
+
+What can help prevent a disease?
+
+What are some nutrition recommendations?
+The answer is based on the information available in the local medical knowledge base.
+
+PDF Report Workflow
+The report feature accepts PDF files.
+
+PDF Upload
+    ↓
+pypdf text extraction
+    ↓
+Search for known disease names
+    ↓
+Match against local dataset
+    ↓
+Display reference information
+To upload a report, use the application's report upload feature.
+
+The uploaded files are stored under:
+
+uploads/reports/
+Database
+The project uses SQLite.
+
+Database file:
+
+chat_history.db
+The application creates the required tables automatically when it starts.
+
+User table
+Stores:
+
+ID
+
+Username
+
+Email
+
+Password hash
+
+Admin table
+Stores:
+
+ID
+
+Username
+
+Password hash
+
+Chat history table
+Stores:
+
+User message
+
+Bot response
+
+Timestamp
+
+Configuration
+The project loads environment variables using python-dotenv.
+
+Create a .env file if you need custom configuration:
+
+SECRET_KEY=replace-with-a-strong-secret-key
+DEFAULT_ADMIN_PASSWORD=replace-with-a-secure-password
+FLASK_DEBUG=false
+Do not commit .env to GitHub.
+
+The .gitignore file should be used to keep secrets, local databases, sessions, and generated files out of source control.
+
+Docker
+The project includes:
+
+Dockerfile
+docker-compose.yml
+You can build and start the application using Docker Compose:
+
+docker compose up --build
+If your Docker installation uses the older command:
+
+docker-compose up --build
+Then open:
+
+http://127.0.0.1:5000
+Security
+For a production deployment:
+
+Change the default admin password.
+
+Use a strong SECRET_KEY.
+
+Never commit passwords or API keys.
+
+Keep .env private.
+
+Use HTTPS.
+
+Validate uploaded files.
+
+Restrict uploaded file sizes.
+
+Use a production WSGI server such as Gunicorn.
+
+Review admin access controls.
+
+Avoid storing unnecessary personal medical information.
+
+Medical Safety
+This application is an informational chatbot, not a medical professional.
+
+It should not be used to:
+
+Diagnose a disease.
+
+Replace a doctor.
+
+Recommend prescription medication.
+
+Determine emergency treatment by itself.
+
+Interpret medical reports as a definitive diagnosis.
+
+The application includes emergency keyword detection to display an urgent-care warning for potentially serious situations.
+
+For severe or life-threatening symptoms, seek professional emergency medical care immediately.
+
+Known Limitations
+The knowledge base is limited to the supplied CSV datasets.
+
+Retrieval quality depends on the quality and coverage of those datasets.
+
+The current answer generator is rule-based rather than LLM-generated.
+
+The report explainer matches recognized disease names rather than performing clinical interpretation.
+
+Emergency detection is keyword-based and cannot reliably identify every emergency.
+
+The system should not be treated as a diagnostic medical AI.
+
+The FAISS index needs to be rebuilt after changes to the source data.
+
+Future Enhancements
+Potential improvements:
+
+Add a local LLM after FAISS retrieval.
+
+Add source/page citations.
+
+Add multilingual medical Q&A.
+
+Add voice input.
+
+Add text-to-speech.
+
+Add stronger medical safety filters.
+
+Add semantic report analysis.
+
+Add doctor/hospital information.
+
+Add better conversation memory.
+
+Add user-specific chat history.
+
+Add RAG evaluation metrics.
+
+Add hybrid keyword + vector search.
+
+Add reranking of retrieved documents.
+
+Add a modern responsive dashboard.
+
+Add automated testing.
+
+Add production deployment configuration.
+
+Student Project Details
+Project Name: MediBot AI — Medical Information RAG Chatbot
+
+Project Type: Student Project
+
+Domain: Artificial Intelligence / Generative AI / Healthcare Information
+
+Backend: Python + Flask
+
+Database: SQLite
+
+RAG: Retrieval-Augmented Generation
+
+Vector Database: FAISS
+
+Embedding Model: all-MiniLM-L6-v2
+
+Document Processing: Pandas + PyPDF
+
+Frontend: HTML + CSS + JavaScript
+
+Authentication: Flask-Login
+
+PDF Export: ReportLab
+
+Containerization: Docker
+
+Learning Outcomes
+This project demonstrates practical knowledge of:
+
+Python programming
+
+Flask web development
+
+REST-style JSON endpoints
+
+User authentication
+
+SQLite database operations
+
+Password hashing
+
+Session management
+
+Data processing with Pandas
+
+Semantic embeddings
+
+Vector databases
+
+FAISS similarity search
+
+RAG architecture
+
+PDF processing
+
+Machine-learning/AI application design
+
+Frontend and backend integration
+
+Docker deployment
+
+Author
+Tanishka Bafna
+
+MediBot AI — Medical Information RAG Chatbot
+
+License
+This project is intended primarily for educational and student-project use.
+
+If publishing it as an open-source project, add an appropriate license such as MIT after reviewing the licensing requirements of all included dependencies and datasets.
+
